@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 300vh;
+            overflow: hidden;
+            
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background-color: #2C2C2C;
+            color: white;
+            padding: 15px;
+            font-style: normal;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 26px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px 0;
+            cursor: pointer;
+        }
+
+        .sidebar li:hover {
+            color: #F5DEB3;
+        }
+
+        /* Main content */
+        .main-content {
+            flex-grow: 1;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .logout {
+            color: black;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .dashboard-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .category {
+            border-radius: 5px;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .category:hover {
+      transform: scale(1.05);
+    }
+
+        .category-blue {
+            background-color: #B0E0E6;
+        }
+
+        .category-red {
+            background-color: #FFB6C1;
+        }
+
+        .category-orange {
+            background-color: #DDA0DD;
+        }
+
+        .category-green {
+            background-color: #5F9EA0;
+        }
+
+        .category span {
+            font-size: 40px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Result System</h3>
+        <ul>
+            <li>Dashboard</li>
+            <li>Student Classes</li>
+            <li>Subjects</li>
+            <li>Students</li>
+            <li>Result</li>
+            <li>Admin Change Password</li>
+        </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header">
+            <h1>Dashboard</h1>
+            
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-container">
+            <div class="category category-blue">
+                <div>
+                    <h2>Admin</h2>
+                    <p></p>
+                </div>
+                <span>👤</span>
+            </div>
+            <div class="category category-red">
+                <div>
+                    <h2>Subjects </h2>
+                    <p></p>
+                </div>
+                <span>📚</span>            
+            </div>
+            <div class="category category-orange">
+                <div>
+                    <h2>Student Information </h2>
+                    <p></p>
+                </div>
+                <span>🏛️</span>
+            </div>
+            <div class="category category-green">
+                <div>
+                    <h2>Results </h2>
+                    <p></p>
+                </div>
+                <span>📄</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
